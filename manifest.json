@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Ecotrack",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "permissions": ["contextMenus", "sidePanel"],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": { "default_popup": "index.html" }
+}
