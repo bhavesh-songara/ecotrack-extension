@@ -4,9 +4,8 @@ import { DefaultPanel } from "./components/DefaultPanel";
 import { DotLoader } from "./components/DotLoader";
 import { Header } from "./components/Header";
 import useApp, { AppStatusEnum } from "./hooks/useApp";
-import AnalyzedPanelV2 from "./components/AnalyzedPanelV2";
-import AnalyzedPanelV3 from "./components/AnalyzePanelV3";
-import { AnalyzedPanelV4 } from "./components/AnalyzedPanelV4";
+
+import { AnalyzedPanelV2 } from "./components/AnalyzedPanelV2";
 
 function App() {
   const { status, imageData, analyzedData } = useApp();
@@ -20,7 +19,7 @@ function App() {
       )}
 
       {status === AppStatusEnum.Analyzed && (
-        <AnalyzedPanelV4 data={analyzedData} imageSrc={imageData?.srcUrl} />
+        <AnalyzedPanelV2 data={analyzedData} imageSrc={imageData?.srcUrl} />
       )}
     </div>
   );

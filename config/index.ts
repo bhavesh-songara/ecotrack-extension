@@ -9,22 +9,7 @@ interface EnvironmentConfig {
 
 interface CommonConfig {}
 
-let environmentConfig: EnvironmentConfig;
-
-switch (process.env.NODE_ENV as string) {
-  case "production":
-    environmentConfig = productionConfig;
-    break;
-  case "development":
-    environmentConfig = developmentConfig;
-    break;
-  case "local":
-    environmentConfig = localConfig;
-    break;
-  default:
-    environmentConfig = developmentConfig;
-    break;
-}
+let environmentConfig: EnvironmentConfig = productionConfig;
 
 let config: EnvironmentConfig & CommonConfig = {
   ...commonConfig,

@@ -1,5 +1,9 @@
 import { PoweredByGemini } from "./PoweredByGemini";
 
+const EMISSION_OFFSET_PER_TREE = 25.97;
+const EMISSION_PER_CAR_KM = 0.136;
+const EMISSION_PER_DAY_ELECTRICITY = 12.12; // Average electricity use 30kwh/day worldwide * 0.43 kgCO2e/kWh
+
 export const AnalyzedCarbonFootPrint = (props: {
   carbonFootPrint: { kgCO2e: number; description: string };
   reportUrl?: string;
@@ -9,20 +13,20 @@ export const AnalyzedCarbonFootPrint = (props: {
   const emissionMetrics = [
     {
       icon: "🌳",
-      label: `Equivalent to planting ${Math.round(
-        carbonFootPrint.kgCO2e / 20
+      label: `Equivalent to planting ${Math.ceil(
+        carbonFootPrint.kgCO2e / EMISSION_OFFSET_PER_TREE
       )} trees`,
     },
     {
       icon: "🚗",
-      label: `Equivalent to driving ${Math.round(
-        carbonFootPrint.kgCO2e / 0.2
-      )} miles in a car`,
+      label: `Equivalent to driving ${Math.ceil(
+        carbonFootPrint.kgCO2e / EMISSION_PER_CAR_KM
+      )} km in a car`,
     },
     {
       icon: "💡",
-      label: `Equivalent to the energy use of an average  home for ${Math.round(
-        carbonFootPrint.kgCO2e / 8
+      label: `Equivalent to the electricity use of an average home for ${Math.round(
+        carbonFootPrint.kgCO2e / EMISSION_PER_DAY_ELECTRICITY
       )} days`,
     },
   ];
