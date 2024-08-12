@@ -25,7 +25,7 @@ export const AnalyzedCarbonFootPrint = (props: {
     },
     {
       icon: "💡",
-      label: `Equivalent to the electricity use of an average home for ${Math.round(
+      label: `Equivalent to the electricity use of an average home for ${Math.ceil(
         carbonFootPrint.kgCO2e / EMISSION_PER_DAY_ELECTRICITY
       )} days`,
     },

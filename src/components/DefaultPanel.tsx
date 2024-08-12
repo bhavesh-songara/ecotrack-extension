@@ -11,7 +11,7 @@ export const DefaultPanel = () => {
         </p>
 
         <p>
-          Right click on an image and select "Analyze with Ecotrack" to analyze
+          Right click on an image and select "Track Sustainability" to analyze
           it
         </p>
       </div>

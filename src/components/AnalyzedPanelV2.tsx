@@ -7,8 +7,14 @@ import { PoweredByGemini } from "./PoweredByGemini";
 export const AnalyzedPanelV2 = (props: { data: any; imageSrc: string }) => {
   const { data, imageSrc } = props;
 
-  const { product, ecoScore, carbonFootPrint, reportUrl, recyclingOptions } =
-    data;
+  const {
+    product,
+    ecoScore,
+    carbonFootPrint,
+    reportUrl,
+    recyclingOptions,
+    quantitativePoints,
+  } = data;
 
   return (
     <div className="bg-gray-100">
@@ -29,6 +35,27 @@ export const AnalyzedPanelV2 = (props: { data: any; imageSrc: string }) => {
           carbonFootPrint={carbonFootPrint}
           reportUrl={reportUrl}
         />
+
+        {quantitativePoints?.length > 0 && (
+          <div className="grid grid-cols-2 gap-2">
+            {quantitativePoints?.map((point: any, index: number) => {
+              return (
+                <section
+                  key={index}
+                  className="bg-white shadow-lg p-4 rounded-lg"
+                >
+                  <div className="flex gap-2 items-start">
+                    <div>{point.icon}</div>
+                    <p className="font-semibold text-sm text-gray-700">
+                      {point.title}
+                    </p>
+                  </div>
+                  <p className="text-sm text-gray-600">{point.description}</p>
+                </section>
+              );
+            })}
+          </div>
+        )}
 
         <EcotrackAnalyzeSection
           title="Recycling Options"
