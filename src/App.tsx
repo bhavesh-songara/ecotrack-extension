@@ -12,15 +12,15 @@ function App() {
 
   return (
     <div>
-      {/* {status === AppStatusEnum.Default && <DefaultPanel />}
+      {status === AppStatusEnum.Default && <DefaultPanel />}
 
       {status === AppStatusEnum.Analyzing && (
         <AnalyzingPanel srcUrl={imageData?.srcUrl} />
       )}
 
-      {status === AppStatusEnum.Analyzed && ( */}
-      <AnalyzedPanelV2 data={analyzedData} imageSrc={imageData?.srcUrl} />
-      {/* )} */}
+      {status === AppStatusEnum.Analyzed && (
+        <AnalyzedPanelV2 data={analyzedData} imageSrc={imageData?.srcUrl} />
+      )}
     </div>
   );
 }
