@@ -25,7 +25,7 @@ The EcoTrack Chrome extension empowers users to make informed, sustainable produ
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/ecotrack-extension.git
+   git clone https://github.com/bhavesh-songara/ecotrack-extension.git
    cd ecotrack-extension
 
    ```
