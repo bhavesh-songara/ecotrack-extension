@@ -15,7 +15,7 @@ export const EcotrackAnalyzeSection = (props: {
       <section className="flex justify-between items-center">
         <h2 className="text-xl font-semibold text-gray-700">{title}</h2>
 
-        <PoweredByGemini />
+        <PoweredByGemini className="text-xs" />
       </section>
 
       <div className="flex flex-col gap-4 mt-3">

@@ -38,7 +38,7 @@ export const AnalyzedCarbonFootPrint = (props: {
           Carbon Footprint
         </h2>
 
-        <PoweredByGemini />
+        <PoweredByGemini className="text-xs" />
       </section>
 
       <div className="text-2xl font-bold text-blue-600 mb-2 mt-2">
